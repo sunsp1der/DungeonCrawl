@@ -1,0 +1,39 @@
+using UnityEngine;
+using System.Collections;
+
+public class Face_If : MonoBehaviour {
+
+	public Sprite UpwardsLeft;
+	public Sprite Left;
+	public Sprite Right;
+	public Sprite Up;
+	public Sprite Down;
+
+	SpriteRenderer spriteRenderer;
+
+
+	// Use this for initialization
+	void Start () {
+		spriteRenderer = GetComponent<SpriteRenderer>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+		if(rigidbody2D.velocity.x < 0) {
+			spriteRenderer.sprite = Left;
+			if(rigidbody2D.velocity.y > 0) {
+				spriteRenderer.sprite = UpwardsLeft;
+			}
+		} 
+		if(rigidbody2D.velocity.x > 0){
+			spriteRenderer.sprite = Right;
+		}
+		if(rigidbody2D.velocity.y > 0){
+			spriteRenderer.sprite = Up;
+		}
+		if(rigidbody2D.velocity.y < 0){
+			spriteRenderer.sprite = Down;
+		}
+	}
+}
