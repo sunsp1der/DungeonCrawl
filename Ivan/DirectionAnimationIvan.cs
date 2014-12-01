@@ -13,10 +13,10 @@ public class DirectionAnimationIvan : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		animator = GetComponent<Animator>(); //"this." at beginning is unneccessary
-		//colliders = new BoxCollider2D[2];
-		//colliders[0] = GetComponent<BoxCollider2D>();
-		colliders = GetComponentsInChildren<BoxCollider2D>();
+		animator = GetComponent<Animator>(); // IVAN: "this." at beginning was unneccessary
+		// GetComponentsInChildren gets all the components in this object and it's children in
+		// the scene hierarchy.
+		colliders = GetComponentsInChildren<BoxCollider2D>(); 
 	}
 	
 	// Update is called once per frame
