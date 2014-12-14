@@ -40,7 +40,7 @@ public class DirectionAnimation : MonoBehaviour
 		}
 		if (animator.GetInteger ("Direction") > 7) 
 		{
-		//	animator.SetInteger("Direction", animator.GetInteger ("Direction")-4);
+			animator.SetInteger("Direction", animator.GetInteger ("Direction")-4);
 		}
 		print (animator.GetInteger ("Direction"));
 	}
